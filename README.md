@@ -1,86 +1,110 @@
-![image](https://github.com/user-attachments/assets/51115023-0a0b-4a1b-8865-948b36cd7421)
-# 📸 Price Gallery - Social Media Profile
+# Price Gallery
 
-A clean, modern social media profile page showcasing user stats and gallery content. Features a responsive design perfect for displaying personal or business profiles with follower counts, posts, and engaging visuals.
+A six-piece interior gallery where selecting a photograph reveals its price.
 
-## 🛠️ What's Inside
+[![Hire me on Fiverr](https://img.shields.io/badge/Hire%20me%20on-Fiverr-1DBF73?style=for-the-badge&logo=fiverr&logoColor=white)](https://www.fiverr.com/pablonietop)
 
-This is a simple static website built with:
-- **HTML5** - Semantic profile structure
-- **CSS3** - Modern styling with responsive grid layouts
-- **Vanilla JavaScript** - Interactive gallery features and animations
-- No backend or database required!
+[![Live demo](https://img.shields.io/badge/demo-pricegallery.wib.digital-2ea44f)](https://pricegallery.wib.digital)
+![Dependencies](https://img.shields.io/badge/npm%20dependencies-0-brightgreen)
+![Build step](https://img.shields.io/badge/build%20step-none-lightgrey)
 
-## 📁 File Structure
+## Description
+
+A price is the one thing a catalogue photograph never shows, and the one thing
+the viewer wants. Printing it under every image turns browsing into comparison
+shopping; hiding it entirely wastes the visit. This page holds it one gesture
+away — the photographs carry the page, and the price arrives only when it is
+asked for.
+
+Six interior pieces sit in an asymmetric grid: a wide photograph beside a
+square one, a tall one holding the right-hand column across two rows. Selecting
+any card slides a dark bar over the top edge of its photograph with the amount
+in Colombian pesos. Selecting it again puts it away, and `Escape` clears
+everything at once.
+
+The whole card is a `<button>`, so the gesture is the same whether it comes
+from a mouse, a thumb or the Tab key, and `aria-expanded` tells a screen reader
+which prices are showing. Static, self-contained, no build step and no
+dependencies.
+
+## Tech stack
+
+| Layer | Technology | Role in project |
+|---|---|---|
+| Markup | HTML5 | `index.html` and `404.html` |
+| Styling | CSS custom properties and CSS Grid | `assets/css/` split into base, layout and components |
+| Scripting | JavaScript, no framework | `assets/js/`, one entry point and one module |
+| Images | WebP | Six gallery photographs plus the logo |
+| Typography | Montserrat, served by Google Fonts | The only web font on the page |
+
+## Project structure
 
 ```
-Price-Gallery/
-├── index.html          # Main profile page
-├── style.css           # Styling and responsive design
-├── script.js           # Gallery interactions
-├── images/             # Profile photos and gallery images
-├── assets/             # Icons and additional resources
-└── README.md           # You're reading this!
+.
+├── index.html                       # The gallery
+├── 404.html                         # Not-found page, links back to the gallery
+├── robots.txt
+├── sitemap.xml
+├── assets/
+│   ├── css/
+│   │   ├── base.css                 # Custom properties, reset, typography, utilities
+│   │   ├── layout.css               # Page shell, header, gallery grid, footer
+│   │   └── components.css           # Skip link, gallery card, link button
+│   ├── js/
+│   │   ├── main.js                  # Entry point
+│   │   └── modules/
+│   │       └── price-reveal.js      # Delegated price toggle
+│   └── img/
+│       ├── content/                 # The six gallery photographs
+│       └── logo/                    # Logo, favicon and Open Graph image
+└── docs/
+    ├── auditoria.md                 # State of the project before this pass
+    └── cambios.md                   # What changed, grouped by phase
 ```
 
-## 🚀 How to Get Started
+## Running it locally
 
-1. **Download the project**
-   ```bash
-   git clone https://github.com/pabloWIB/Price-Gallery.git
-   ```
+The page has no build step. Opening `index.html` straight from disk works —
+the scripts are plain classic scripts rather than ES modules precisely so that
+`file://` stays viable.
 
-2. **Open the folder** and double-click `index.html`
+To serve it over HTTP instead, from the project root:
 
-3. **Explore the profile!** 🎉 Your gallery website is ready to view
+```bash
+npx serve .
+```
 
-That's it! No installation, no setup, no servers required.
+Or, without Node:
 
-## ✨ Easy Customization
+```bash
+python -m http.server 4180
+```
 
-Want to make it your own profile? Here's how:
+## Deployment
 
-- **Update profile info**: Change name, location, and stats in `index.html`
-- **Add your photos**: Replace images in the `images/` folder
-- **Customize colors**: Modify the CSS variables in `style.css`
-- **Update stats**: Edit follower count, posts, and following numbers
-- **Add more content**: Include additional gallery sections or bio information
+Deployed on Vercel at [pricegallery.wib.digital](https://pricegallery.wib.digital).
+Static: upload the repository root as-is, with no build command and no output
+directory. Vercel serves `404.html` for unmatched paths automatically, so no
+routing configuration is needed.
 
-## 🌐 Free Hosting Options
+## Credentials
 
-Share your profile website with the world:
+The project uses none. There is no API, no form endpoint and no analytics, so
+there is nothing to configure and no environment file to create.
 
-- **GitHub Pages**: Push to GitHub, enable Pages in settings
-- **Netlify**: Drag and drop your folder at netlify.com
-- **Vercel**: Import your GitHub repo at vercel.com
-- **Surge.sh**: Simple command-line deployment
+## Author
 
-## 💡 Beginner Tips
-
-**New to web development?** Here are some great resources:
-- [MDN Web Docs](https://developer.mozilla.org/) - Learn HTML, CSS, and JavaScript
-- [freeCodeCamp](https://www.freecodecamp.org/) - Free coding bootcamp
-- [CSS Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/) - Master responsive layouts
-
-**Pro Tips:**
-- Use browser developer tools (F12) to experiment with styles
-- Test on different screen sizes to ensure responsiveness
-- Optimize images for web to improve loading speed
-- Start with small changes like colors and text
-- Save often and refresh your browser to see changes
-
-## 🎨 Features
-
-- **Responsive Design**: Looks great on desktop, tablet, and mobile
-- **Clean Profile Layout**: Professional presentation of user information
-- **Interactive Gallery**: Smooth hover effects and transitions
-- **Social Stats Display**: Follower count, posts, and following metrics
-- **Modern UI**: Contemporary design with smooth animations
-
-## 🤝 Contributing
-
-Found a bug or have a suggestion? Feel free to open an issue or submit a pull request!
+**Pablo Nieto Pérez** — [wib.digital](https://wib.digital)
+GitHub: [@pabloWIB](https://github.com/pabloWIB)
 
 ---
 
-**Show off your best work! 📸** Made with ❤️ for creatives and social media enthusiasts
+## Hire me
+
+I build **custom internal tools, CRMs and dashboards** for small teams, and
+**conversion-focused websites** for businesses.
+
+- [Custom internal tool, CRM or dashboard](https://www.fiverr.com/pablonietop/build-a-custom-internal-app-for-your-business) — from $45
+- [Conversion-focused website](https://www.fiverr.com/pablonietop/convert-your-landing-page-design-to-code) — from $80
+- [All my services on Fiverr](https://www.fiverr.com/pablonietop)
+- [wib.digital](https://wib.digital)

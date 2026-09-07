@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pricegallery.wib.digital/sitemap.xml
+Sitemap: https://pablowib.github.io/Profile-Gallery-UI/sitemap.xml

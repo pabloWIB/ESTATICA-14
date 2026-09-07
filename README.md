@@ -4,7 +4,7 @@ A six-piece interior gallery where selecting a photograph reveals its price.
 
 [![Hire me on Fiverr](https://img.shields.io/badge/Hire%20me%20on-Fiverr-1DBF73?style=for-the-badge&logo=fiverr&logoColor=white)](https://www.fiverr.com/pablonietop)
 
-[![Live demo](https://img.shields.io/badge/demo-pricegallery.wib.digital-2ea44f)](https://pricegallery.wib.digital)
+[![Live demo](https://img.shields.io/badge/demo-pablowib.github.io/Profile-Gallery-UI-2ea44f)](https://pablowib.github.io/Profile-Gallery-UI)
 ![Dependencies](https://img.shields.io/badge/npm%20dependencies-0-brightgreen)
 ![Build step](https://img.shields.io/badge/build%20step-none-lightgrey)
 
@@ -82,9 +82,9 @@ python -m http.server 4180
 
 ## Deployment
 
-Deployed on Vercel at [pricegallery.wib.digital](https://pricegallery.wib.digital).
+Deployed on GitHub Pages at [pablowib.github.io/Profile-Gallery-UI](https://pablowib.github.io/Profile-Gallery-UI).
 Static: upload the repository root as-is, with no build command and no output
-directory. Vercel serves `404.html` for unmatched paths automatically, so no
+directory. GitHub Pages serves `404.html` for unmatched paths automatically, so no
 routing configuration is needed.
 
 ## Credentials
